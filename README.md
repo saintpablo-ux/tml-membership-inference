@@ -26,13 +26,27 @@ The final attack uses:
 ## Reproduce submission
 
 Run:
-
+```bash
 python make_submission.py
+```
 
 This creates:
-
+```text
 submission.csv
+```
 
 To submit using the provided template:
-
+```bash
 python task_template.py
+```
+
+## Optional: rebuild the reference cache
+
+Rebuilding is **not required** because `reference_lira_loss_cache.npz` is already included.
+
+The file `reference_lira_loss_diagnostic.py` is included for optional cache rebuilding. This script was used to train the 32 reference models and create `reference_lira_loss_cache.npz`.
+
+To recreate the cache from scratch, delete the existing cache file and run:
+
+```bash
+python reference_lira_loss_diagnostic.py
